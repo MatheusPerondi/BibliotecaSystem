@@ -29,6 +29,11 @@ public class Livro {
         this.editora = editora;
     }
 
+    public void addAutor(Autor autor){
+        autorList.add(autor);
+        autor.getLivroList().add(this);
+    }
+
     public Livro() {
     }
 

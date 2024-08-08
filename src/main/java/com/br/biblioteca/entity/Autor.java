@@ -32,6 +32,11 @@ public class Autor {
     public Autor() {
     }
 
+    public void addLivro(Livro livro){
+        livroList.add(livro);
+        livro.getAutorList().add(this);
+    }
+
     public Integer getId() {
         return id;
     }
@@ -62,6 +67,14 @@ public class Autor {
 
     public void setNacionalidade(String nacionalidade) {
         this.nacionalidade = nacionalidade;
+    }
+
+    public List<Livro> getLivroList() {
+        return livroList;
+    }
+
+    public void setLivroList(List<Livro> livroList) {
+        this.livroList = livroList;
     }
 
     @Override
