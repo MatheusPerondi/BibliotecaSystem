@@ -12,8 +12,7 @@ public class Cliente {
     @Embedded
     private Contato contato;
 
-    public Cliente(Integer id, String nome) {
-        this.id = id;
+    public Cliente(String nome) {
         this.nome = nome;
     }
 
@@ -36,11 +35,20 @@ public class Cliente {
         this.nome = nome;
     }
 
+    public Contato getContato() {
+        return contato;
+    }
+
+    public void setContato(Contato contato) {
+        this.contato = contato;
+    }
+
     @Override
     public String toString() {
         return "Cliente{" +
                 "id=" + id +
                 ", nome='" + nome + '\'' +
+                ", contato=" + contato +
                 '}';
     }
 }

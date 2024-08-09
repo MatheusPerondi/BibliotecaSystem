@@ -1,7 +1,8 @@
 package com.br.biblioteca.service;
 
-import com.br.biblioteca.dao.AutorDao;
+import com.br.biblioteca.dao.*;
 import com.br.biblioteca.entity.Autor;
+import com.br.biblioteca.entity.Cliente;
 import com.br.biblioteca.entity.Editora;
 import com.br.biblioteca.util.CargaDeDadosUtil;
 import com.br.biblioteca.util.JPAUtil;
@@ -13,8 +14,64 @@ public class Service {
         EntityManager entityManager = JPAUtil.getEntityManager();
 
         AutorDao autorDao = new AutorDao(entityManager);
+        CategoriaDao categoriaDao = new CategoriaDao(entityManager);
+        ClienteDao clienteDao = new ClienteDao(entityManager);
+        EditoraDao editoraDao = new EditoraDao(entityManager);
+        EmprestimoDao emprestimoDao = new EmprestimoDao(entityManager);
+        LivroDao livroDao = new LivroDao(entityManager);
+
         entityManager.getTransaction().begin();
-        CargaDeDadosUtil.cadastrarAutoresELivros(entityManager);
+        CargaDeDadosUtil.cadastrarDados(entityManager);
+
+        entityManager.getTransaction().begin();
+
+        autorDao.consultarPorid(1);
+        System.out.println("--------------------------------------");
+        System.out.println("Consulta por ID");
+        System.out.println(autorDao.consultarPorid(1));
+
+        System.out.println("--------------------------------------");
+        System.out.println("Consulta Por nome");
+        System.out.println(autorDao.consultarPorNome("J.K. Rowling"));
+        System.out.println("--------------------------------------");
+
+        System.out.println("Consultar categoria por ID");
+        System.out.println(categoriaDao.consultarId(1));
+        System.out.println("--------------------------------------");
+
+        System.out.println("Consultar cliente por ID");
+        System.out.println(clienteDao.consultarId(1));
+        System.out.println("--------------------------------------");
+
+        System.out.println("Consultar cliente por nome");
+        System.out.println(clienteDao.consultarNome("Alice"));
+        System.out.println("--------------------------------------");
+
+        System.out.println("Consultar editora por id");
+        System.out.println(editoraDao.consultarPorId(1));
+        System.out.println("--------------------------------------");
+
+        System.out.println("Consultar emprestimo por nome de cliente");
+        System.out.println(emprestimoDao.consultarNomeCliente("Alice"));
+        System.out.println("--------------------------------------");
+
+        System.out.println("Consultar emprestimo por id");
+        System.out.println(emprestimoDao.consultarId(1));
+        System.out.println("--------------------------------------");
+
+        System.out.println("Consultar livro por id");
+        System.out.println(livroDao.consultarLivroPorId(4));
+        System.out.println("--------------------------------------");
+
+        System.out.println("Consultar livro por nome");
+        System.out.println(livroDao.consultarLivroPorNome("Harry Potter e a Pedra Filosofal"));
+        System.out.println("--------------------------------------");
+
+
+
+
+        entityManager.getTransaction().commit();
+
 
         entityManager.close();
 

@@ -26,7 +26,7 @@ public class LivroDao {
     }
 
     public List<Livro> consultarLivroPorNome(final String nome){
-        String jpql = "String jpql = \"SELECT l FROM Livro l WHERE UPPER(l.nome) LIKE UPPER(:nome)\";";
+        String jpql = "SELECT l FROM Livro l WHERE UPPER(l.nome) LIKE UPPER(:nome)";
         return this.entityManager.createQuery(jpql, Livro.class).setParameter("nome", "%"+nome+"%").getResultList();
     }
 
