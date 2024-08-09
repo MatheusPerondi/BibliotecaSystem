@@ -4,18 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="011b86ec-4a3d-4ff8-b14c-9a55eeef0e6f" name="Changes" comment="arrumando toString">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/biblioteca/dao/AutorDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/biblioteca/dao/CategoriaDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/biblioteca/dao/EditoraDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/biblioteca/dao/LivroDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/biblioteca/service/Service.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/biblioteca/util/CargaDeDadosUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/biblioteca/util/JPAUtil.java" afterDir="false" />
+    <list default="true" id="011b86ec-4a3d-4ff8-b14c-9a55eeef0e6f" name="Changes" comment="Criando mais entidades, DAO, carga de dados e Service">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/biblioteca/dao/ClienteDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/biblioteca/dao/EmprestimoDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/biblioteca/entity/Autor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/biblioteca/entity/Autor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/biblioteca/entity/Livro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/biblioteca/entity/Livro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/biblioteca/dao/LivroDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/biblioteca/dao/LivroDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/biblioteca/entity/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/biblioteca/entity/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/biblioteca/entity/Emprestimo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/biblioteca/entity/Emprestimo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/biblioteca/service/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/biblioteca/service/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/biblioteca/util/CargaDeDadosUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/biblioteca/util/CargaDeDadosUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +29,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/br/biblioteca/service/Service.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -86,13 +87,22 @@
       <option name="project" value="LOCAL" />
       <updated>1723124565111</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Criando mais entidades, DAO, carga de dados e Service">
+      <option name="closed" value="true" />
+      <created>1723144006674</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1723144006674</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Criacao das entidades Categoria, Livro, Editora, Autor, Cliente, Contato, Emprestimo" />
     <MESSAGE value="arrumando toString" />
-    <option name="LAST_COMMIT_MESSAGE" value="arrumando toString" />
+    <MESSAGE value="Criando mais entidades, DAO, carga de dados e Service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Criando mais entidades, DAO, carga de dados e Service" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
