@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="011b86ec-4a3d-4ff8-b14c-9a55eeef0e6f" name="Changes" comment="Criando mais entidades, DAO, carga de dados e Service">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/biblioteca/dao/ClienteDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/br/biblioteca/dao/EmprestimoDao.java" afterDir="false" />
+    <list default="true" id="011b86ec-4a3d-4ff8-b14c-9a55eeef0e6f" name="Changes" comment="Testando classes dao e arrumando service">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/br/biblioteca/dao/LivroDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/biblioteca/dao/LivroDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/biblioteca/entity/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/biblioteca/entity/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/biblioteca/entity/Emprestimo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/biblioteca/entity/Emprestimo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/br/biblioteca/entity/Livro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/biblioteca/entity/Livro.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/br/biblioteca/service/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/biblioteca/service/Service.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/br/biblioteca/util/CargaDeDadosUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/br/biblioteca/util/CargaDeDadosUtil.java" afterDir="false" />
     </list>
@@ -44,17 +40,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Service.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "onboarding.tips.debug.path": "C:/Users/Maths/BibliotecaSystem/src/main/java/org/example/Main.java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Service.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Maths/BibliotecaSystem/src/main/java/org/example/Main.java&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -95,14 +91,31 @@
       <option name="project" value="LOCAL" />
       <updated>1723144006674</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Testando classes dao e arrumando service">
+      <option name="closed" value="true" />
+      <created>1723163813351</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1723163813351</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Testando classes dao e arrumando service">
+      <option name="closed" value="true" />
+      <created>1723163825005</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1723163825005</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Criacao das entidades Categoria, Livro, Editora, Autor, Cliente, Contato, Emprestimo" />
     <MESSAGE value="arrumando toString" />
     <MESSAGE value="Criando mais entidades, DAO, carga de dados e Service" />
-    <option name="LAST_COMMIT_MESSAGE" value="Criando mais entidades, DAO, carga de dados e Service" />
+    <MESSAGE value="Testando classes dao e arrumando service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Testando classes dao e arrumando service" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

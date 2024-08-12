@@ -1,9 +1,7 @@
 package com.br.biblioteca.service;
 
 import com.br.biblioteca.dao.*;
-import com.br.biblioteca.entity.Autor;
-import com.br.biblioteca.entity.Cliente;
-import com.br.biblioteca.entity.Editora;
+import com.br.biblioteca.entity.*;
 import com.br.biblioteca.util.CargaDeDadosUtil;
 import com.br.biblioteca.util.JPAUtil;
 
@@ -22,10 +20,20 @@ public class Service {
 
         entityManager.getTransaction().begin();
         CargaDeDadosUtil.cadastrarDados(entityManager);
+        entityManager.getTransaction().commit();
 
         entityManager.getTransaction().begin();
 
-        autorDao.consultarPorid(1);
+
+        Livro livro = livroDao.consultarLivroPorId(1);
+        System.out.println("Tentando emprestar o livro: " + livro.getNome());
+        livroDao.emprestarLivro(livro);
+        System.out.println("Exemplares disponíveis após empréstimo: " + livro.getExemplaresDisponiveis());
+
+        System.out.println("Tentando devolver o livro: " + livro.getNome());
+        livroDao.devolverLivro(livro);
+        System.out.println("Exemplares disponíveis após devolução: " + livro.getExemplaresDisponiveis());
+
         System.out.println("--------------------------------------");
         System.out.println("Consulta por ID");
         System.out.println(autorDao.consultarPorid(1));
@@ -60,20 +68,14 @@ public class Service {
         System.out.println("--------------------------------------");
 
         System.out.println("Consultar livro por id");
-        System.out.println(livroDao.consultarLivroPorId(4));
+        System.out.println(livroDao.consultarLivroPorId(1));
         System.out.println("--------------------------------------");
 
         System.out.println("Consultar livro por nome");
         System.out.println(livroDao.consultarLivroPorNome("Harry Potter e a Pedra Filosofal"));
         System.out.println("--------------------------------------");
 
-
-
-
         entityManager.getTransaction().commit();
-
-
         entityManager.close();
-
     }
 }

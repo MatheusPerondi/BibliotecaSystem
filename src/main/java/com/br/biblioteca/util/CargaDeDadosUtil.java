@@ -1,18 +1,7 @@
 package com.br.biblioteca.util;
 
-import com.br.biblioteca.dao.AutorDao;
-import com.br.biblioteca.dao.CategoriaDao;
-import com.br.biblioteca.dao.EditoraDao;
-import com.br.biblioteca.dao.LivroDao;
-import com.br.biblioteca.dao.ClienteDao;
-import com.br.biblioteca.dao.EmprestimoDao;
-import com.br.biblioteca.entity.Autor;
-import com.br.biblioteca.entity.Categoria;
-import com.br.biblioteca.entity.Editora;
-import com.br.biblioteca.entity.Livro;
-import com.br.biblioteca.entity.Cliente;
-import com.br.biblioteca.entity.Emprestimo;
-import com.br.biblioteca.entity.Contato;
+import com.br.biblioteca.dao.*;
+import com.br.biblioteca.entity.*;
 
 import javax.persistence.EntityManager;
 import java.time.LocalDate;
@@ -42,10 +31,10 @@ public class CargaDeDadosUtil {
         Autor autor2 = new Autor("George R.R. Martin", LocalDate.of(1948, 9, 20), "Americano");
         Autor autor3 = new Autor("J.R.R. Tolkien", LocalDate.of(1892, 1, 3), "Britânico");
 
-        // Criar Livros
-        Livro livro1 = new Livro("Harry Potter e a Pedra Filosofal", 1997, Arrays.asList(autor1), categoriaFantasia, editoraBloomsbury);
-        Livro livro2 = new Livro("A Guerra dos Tronos", 1996, Arrays.asList(autor2), categoriaFantasia, editoraHarperCollins);
-        Livro livro3 = new Livro("O Senhor dos Anéis", 1954, Arrays.asList(autor3), categoriaAventura, editoraHarperCollins);
+        // Criar Livros com quantidades de estoque e exemplares disponíveis
+        Livro livro1 = new Livro("Harry Potter e a Pedra Filosofal", 1997, Arrays.asList(autor1), categoriaFantasia, editoraBloomsbury, 10, 10);
+        Livro livro2 = new Livro("A Guerra dos Tronos", 1996, Arrays.asList(autor2), categoriaFantasia, editoraHarperCollins, 8, 8);
+        Livro livro3 = new Livro("O Senhor dos Anéis", 1954, Arrays.asList(autor3), categoriaAventura, editoraHarperCollins, 5, 5);
 
         // Criar Clientes
         Cliente cliente1 = new Cliente("Alice");
@@ -104,7 +93,6 @@ public class CargaDeDadosUtil {
         emprestimoDao.consultarTodos().forEach(System.out::println);
         System.out.println("----------------------------------");
 
-        entityManager.getTransaction().commit();
         entityManager.clear();
     }
 }

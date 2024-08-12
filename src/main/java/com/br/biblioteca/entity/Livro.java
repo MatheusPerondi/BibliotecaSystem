@@ -20,13 +20,19 @@ public class Livro {
 
     @ManyToOne(fetch = FetchType.LAZY)
     private Editora editora;
+    @Column(name = "quantidade_em_estoque")
+    private Integer quantidadeEstoque;
+    @Column(name = "exemplares_disponiveis")
+    private Integer exemplaresDisponiveis;
 
-    public Livro(String nome, Integer ano, List<Autor> autorList, Categoria categoria, Editora editora) {
+    public Livro(String nome, Integer ano, List<Autor> autorList, Categoria categoria, Editora editora, Integer quantidadeEstoque, Integer exemplaresDisponiveis) {
         this.nome = nome;
         this.ano = ano;
         this.autorList = autorList;
         this.categoria = categoria;
         this.editora = editora;
+        this.quantidadeEstoque = quantidadeEstoque;
+        this.exemplaresDisponiveis = exemplaresDisponiveis;
     }
 
     public void addAutor(Autor autor){
@@ -85,6 +91,22 @@ public class Livro {
         this.editora = editora;
     }
 
+    public Integer getQuantidadeEstoque() {
+        return quantidadeEstoque;
+    }
+
+    public void setQuantidadeEstoque(int quantidadeEstoque) {
+        this.quantidadeEstoque = quantidadeEstoque;
+    }
+
+    public Integer getExemplaresDisponiveis() {
+        return exemplaresDisponiveis;
+    }
+
+    public void setExemplaresDisponiveis(int exemplaresDisponiveis) {
+        this.exemplaresDisponiveis = exemplaresDisponiveis;
+    }
+
     @Override
     public String toString() {
         return "Livro{" +
@@ -94,6 +116,8 @@ public class Livro {
                 ", autorList=" + autorList +
                 ", categoria=" + categoria +
                 ", editora=" + editora +
+                ", quantidadeEstoque=" + quantidadeEstoque +
+                ", exemplaresDisponiveis=" + exemplaresDisponiveis +
                 '}';
     }
 }
